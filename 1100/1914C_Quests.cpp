@@ -26,11 +26,11 @@ int main() {
 
         ll ans = LLONG_MIN, sum = 0, maxi = b[0];
 
-        for (int i = 0; i < min(n, k); i++) {  // Ensures we do not exceed 'k' steps
+        for (int i = 0; i < min(n, k); i++) {  
             sum += a[i];
             maxi = max(maxi, b[i]);
 
-            ans = max(ans, sum + (k - (i + 1)) * maxi); // Ensure (k - (i + 1)) is non-negative
+            ans = max(ans, sum + (k - (i + 1)) * maxi); 
         }
 
         cout << ans << endl;
