@@ -41,8 +41,17 @@ int main() {
 
         if(cnt > k) cout << "NO\n";
         else{
+            //subtract cnt from k because those operations are mandatory to fix symmetry
             k -= cnt;
+
+            //if n is odd, we can always modify the center element, so the answer is "YES".
             if(n & 1) cout << "YES\n";
+
+            //If n is even, we check if k is even:
+
+            //If k is even, we can distribute the changes symmetrically → "YES".
+
+            //If k is odd, we cannot make it symmetric → "NO".
             else cout << (k & 1 ? "NO\n" : "YES\n");
         }
 

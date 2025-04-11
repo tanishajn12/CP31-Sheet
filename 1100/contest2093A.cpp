@@ -4,9 +4,6 @@ using namespace std;
 const ll mod = 1e9 + 7;
 
 int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    
     #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
@@ -16,14 +13,22 @@ int main() {
     cin >> t;
 
     while (t--) {
-        ll n;
-        cin >> n;
+        int k;
+        cin >> k;
 
-        vector<ll> a(n);
+        if(k==1){
+            cout<<"YES"<<endl;
+            continue;
 
-        for (ll i = 0; i < n; i++) {
-            cin >> a[i];
         }
+
+        if(k%2==0) cout<<"NO"<<endl;
+        else cout<<"YES"<<endl;
+
+
+        //k=2 -> (n,n) => 2*n
+        //
+        
 
        
     }
